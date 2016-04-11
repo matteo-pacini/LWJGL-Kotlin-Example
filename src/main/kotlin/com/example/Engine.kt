@@ -63,8 +63,8 @@ class Engine {
         // Center our window
         glfwSetWindowPos(
                 window!!,
-                (vidmode.width() - 800) / 2,
-                (vidmode.height() - 600) / 2
+                (vidmode.width() - WINDOW_SIZE.first) / 2,
+                (vidmode.height() - WINDOW_SIZE.second) / 2
         );
 
         // Make the OpenGL context current
