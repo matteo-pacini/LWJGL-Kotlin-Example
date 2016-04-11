@@ -19,6 +19,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="LWJGLKotlinExample_main" target="1.8" />
+      <module name="LWJGLKotlinExample_test" target="1.8" />
       <module name="MyGame_main" target="1.8" />
       <module name="MyGame_test" target="1.8" />
     </bytecodeTargetLevel>
