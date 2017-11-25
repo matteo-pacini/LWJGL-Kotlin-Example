@@ -27,7 +27,7 @@ class Engine {
         errorCallback = glfwSetErrorCallback(GLFWErrorCallback.createPrint(System.err))
 
         // Initialize GLFW. Most GLFW functions will not work before doing this.
-        if ( glfwInit() != GLFW_TRUE ) {
+        if (!glfwInit()) {
             throw IllegalStateException("Unable to initialize GLFW")
         }
 
@@ -51,7 +51,7 @@ class Engine {
                                 mods: kotlin.Int) {
 
                 if (key == GLFW_KEY_ESCAPE && action == GLFW_RELEASE ) {
-                    glfwSetWindowShouldClose(window, GLFW_TRUE)
+                    glfwSetWindowShouldClose(window, true)
                 }
 
             }
@@ -91,7 +91,7 @@ class Engine {
 
         // Run the rendering loop until the user has attempted to close
         // the window or has pressed the ESCAPE key.
-        while (glfwWindowShouldClose(window!!) == GLFW_FALSE ) {
+        while (!glfwWindowShouldClose(window!!)) {
 
             // Clear the framebuffer
             glClear(GL_COLOR_BUFFER_BIT or GL_DEPTH_BUFFER_BIT)
