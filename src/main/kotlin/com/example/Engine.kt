@@ -114,13 +114,11 @@ class Engine {
             loop()
             // Destroy window
             glfwDestroyWindow(window!!);
-            keyCallback?.release()
 
         } finally {
 
             // Terminate GLFW
             glfwTerminate()
-            errorCallback?.release()
 
         }
     }
